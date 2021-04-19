@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[BT]Ứng dụng chuyển đổi tiền tệ</title>
+</head>
+<body>
+<form>
+    <br>
+    <input type="text" id="number"/><b>Amount</b>
+    <br>
+    <select id="From" >
+        <option value="VN">Việt Nam </option>
+    </select>
+        <b>From Currency</b>
+    <br>
+    <select id="To" >
+        <option value="use">USD</option>
+        <option value="TQ">Nhân dân tệ</option>
+    </select>
+    <b>To Currency</b>
+    <br>
+    <input type="button" onclick="show();" value="Chuyển Đổi">
+
+</form>
+<script>
+    function show() {
+        let number = parseInt(document.getElementById("number").value);
+        let from = document.getElementById("From").value;
+        let to = document.getElementById("To").value;
+
+        if(from== "VN" && to=="use"){
+            console.log(from);
+            console.log(to);
+            let cd = number * 23000;
+            document.writeln('VND ='+number + ' Chuyển sang USD = '+ cd );
+
+        }else if(from=="VN" && to=="TQ"){
+            console.log(from);
+            console.log(to);
+            let cd = number * 3000;
+            document.writeln('VND ='+number + ' Chuyển sang Nhân dân tệ = '+ cd );
+        }
+        }
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài1</title>
+</head>
+<body>
+<script>
+    let VatLy;
+    let HoaHoc;
+    let SinhHoc;
+
+    VatLy = prompt('Nhập điểm Vật Lý: ')
+    HoaHoc = prompt('Nhập điểm Hóa Học')
+    SinhHoc = prompt('Nhập điểm Sinh Học')
+
+    let a = parseInt(VatLy);
+    let b = parseInt(HoaHoc);
+    let c = parseInt(SinhHoc);
+
+    let TB = (a+b+c)/3;
+    let T  = a+b+c;
+    document.writeln('Điểm trung bình 3 môn = '+TB );
+    document.writeln('<br>Tổng điểm 3 môn = '+T)
+</script>
+</body>
+</html>

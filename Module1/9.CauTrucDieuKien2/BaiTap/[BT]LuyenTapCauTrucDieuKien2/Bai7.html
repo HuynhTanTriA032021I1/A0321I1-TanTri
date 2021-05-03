@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giải phương trình bậc 2.</title>
+</head>
+<body>
+<script>
+    //ax^2 + bx +c =0
+
+    let a = parseInt(prompt("Nhập a!!"))
+    let b = parseInt(prompt("Nhập b!!"))
+    let c = parseInt(prompt("Nhập c!!"))
+    let denta = b*b -4*a*c
+    if(denta == 0){
+        let x = -b/(2*a)
+        document.write("Ta có nghiệm kép: X= "+x)
+    }else if(denta > 0){
+        let x1 = (-b + Math.sqrt(denta)) / (2*a)
+        let x2 = (-b - Math.sqrt(denta)) / (2*a)
+        document.write("X1= "+x1)
+        document.write("X2= "+x2)
+    }else document.write("Phương trình vô nghiệm!!")
+</script>
+</body>
+</html>

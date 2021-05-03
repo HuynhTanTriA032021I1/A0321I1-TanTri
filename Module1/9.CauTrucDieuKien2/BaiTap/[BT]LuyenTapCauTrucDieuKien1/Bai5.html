@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt(" Nhâp điểm bài kiểm tra!!"))
+    let b = parseInt(prompt(" Nhập điểm kiểm tra giữa kì!! "))
+    let c = parseInt(prompt(" Nhập điểm kiểm tra cuối kì!!"))
+
+    let TB = (a+b+c) / 3;
+
+    if(TB>=8 && TB<=10){
+        alert("Giỏi")
+    }else if(TB>= 7 && TB<8){
+        alert("khá")
+    }else if(TB>=6 && TB<7){
+        alert("Trung bình")
+    }else alert("Yếu!! Không Đủ chỉ tiêu để Lên lớp")
+</script>
+</body>
+</html>

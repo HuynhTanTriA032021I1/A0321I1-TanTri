@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let CanNang = parseInt(prompt("Nhập Cân Nặng: "));
+    let  ChieuCao = parseInt(prompt("Nhập Chiều Cào: "));
+    let bmi = (CanNang / (ChieuCao ^ 2));
+    if (bmi < 18)
+        document.write("Thiết Cân");
+    else if (bmi < 25.0)
+        document.write("Bình Thường");
+    else if (bmi < 30.0)
+        document.write("Thừa Cân");
+    else if (30<bmi)
+        document.write("Béo phì");
+    switch (bmi) {
+        case 18:
+            alert('Thiết Cân');
+            break;
+        case 25:
+            alert("Thừa Cân");
+            break;
+        case 30:
+            alert("Béo Phì");
+    }
+</script>
+</body>
+</html>

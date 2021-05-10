@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" onclick="hinh1()" value="Hình 1">
+<input type="button" onclick="hinh2()" value="Hình 2">
+<script>
+    function hinh2() {
+        let number = 5;
+        let a = "";
+        for (let i = 0; i < number; i++) {
+            a += "*";
+            document.writeln(a + "<br/>");
+        }
+    }
+    function hinh1() {
+        let n = 5;
+        for (let i = 1; i <= n; i++) {
+            for (let j = 0; j <= n - i; j++) {
+                document.write("*");
+            }
+            document.write("<br/>");
+        }
+    }
+</script>
+</body>
+</html>

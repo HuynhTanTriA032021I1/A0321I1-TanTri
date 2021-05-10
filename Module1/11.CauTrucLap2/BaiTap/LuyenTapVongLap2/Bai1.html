@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number = parseInt(prompt("Nhập vào số lượng số tự nhiên trong dãy Fidonacci bạn muốn hiển thị: "));
+    let a = 0;
+    let b = 1;
+    document.writeln(a);
+    document.writeln(b);
+    let c;
+    for (i=0; i < number - 2; i++){
+        c = a + b;
+        document.writeln(c);
+        a = b;
+        b = c;
+    }
+</script>
+</body>
+</html>

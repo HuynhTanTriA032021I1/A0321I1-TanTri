@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="value" placeholder="Nhập Ký tự vào đây" type="text"/>
+<input type="button" id="check" value="Check" onclick="Bai4()"/>
+</body>
+<script>
+    function Bai4()
+    {
+        let x = document.getElementById("value").value;
+        if (isNaN(x)) {
+            alert("False");
+        } else {
+            alert("True");
+        }
+    }
+</script>
+</html>

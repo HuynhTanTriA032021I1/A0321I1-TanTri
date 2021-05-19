@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="number1"/> <br>
+<br>
+<input type="number" id="number2"/><br>
+<br>
+<input type="button" id="check" value="KiemTra" onclick="Bai3()" /><br>
+<br>
+
+<script>
+    function Bai3() {
+        let a = parseInt(document.getElementById("number1").value);
+        let b = parseInt(document.getElementById("number2").value);
+        if (a>b){
+            alert("Số thứ nhất lớn hơn số thứ hai!");
+        } else {
+            let sum = a + b;
+            document.getElementById("hienThi").innerHTML = "Tổng của hai số bạn vừa nhập là: " + sum;
+        }
+    }
+</script>
+</body>
+
+
+</html>

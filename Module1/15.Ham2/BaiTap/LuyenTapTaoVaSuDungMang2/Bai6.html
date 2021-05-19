@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="value" placeholder="Nhập Số Ở Đây" type="number"/>
+<input type="button" id="check" value="Check" onclick="Bai6()"/>
+</body>
+<script>
+    function Bai6() {
+        let x = document.getElementById("value").value;
+        if (Number.isInteger(x)) {
+            if (x > 0) {
+                alert("True");
+            } else {
+                alert("False");
+            }
+        } else {
+            alert("False");
+        }
+    }
+</script>
+</html>

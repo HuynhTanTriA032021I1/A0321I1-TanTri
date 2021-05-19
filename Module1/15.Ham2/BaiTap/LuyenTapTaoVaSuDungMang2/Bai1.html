@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="Num"/>
+<input type="button" value="KiemTra" onclick="Bai1()"/>
+<br/>
+<p id="hienThi"></p>
+</body>
+<script>
+
+    function Bai1() {
+        let x = parseInt(document.getElementById("Num").value);
+        a = x * x;
+        document.getElementById("hienThi").innerHTML = "Bình phương là: " + a;
+    }
+</script>
+</html>

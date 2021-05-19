@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+    <input type="number" placeholder="Number1" id="number1"/ > <br/>
+    <br/>
+
+    <input type="number" placeholder="Number2" id="number2"/> <br/>
+    <br/>
+
+    <input type="number" placeholder="Number3" id="number3"/> <br/>
+    <br/>
+    <input type="button" id="checkMin" value="Check" onclick="Bai5()"/>
+<p id="hienThi"></p>
+</body>
+<script>
+
+    function Bai5() {
+        var num1 = document.getElementById("number1").value;
+        var num2 = document.getElementById("number2").value;
+        var num3 = document.getElementById("number3").value;
+        if (x < y) {
+            if (x < z) {
+                document.getElementById("hienThi").innerHTML = "Số nhỏ nhất là: " + x;
+            } else {
+                document.getElementById("hienThi").innerHTML = "Số nhỏ nhất là: " + z;
+            }
+        } else if (y < z) {
+            document.getElementById("hienThi").innerHTML = "Số nhỏ nhất là: " + y;
+        } else {
+            document.getElementById("hienThi").innerHTML = "Số nhỏ nhất là: " + z;
+        }
+    }
+</script>
+</html>

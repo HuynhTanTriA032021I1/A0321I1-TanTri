@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="hienThitruoc"></p>
+<p id="hienThisau"></p>
+</body>
+<script>
+    function Bai7(array) {
+
+        let temp = array[0] ;
+        array[0] = array[1]
+        array[1]=temp;
+    }
+    let a = parseInt(prompt("Nhập a!!"))
+    let b = parseInt(prompt("Nhập b!!"))
+
+    let array = [a,b]
+    Bai7(array)
+    alert("Trước Khi hoán đổi: a="+a+ "b= "+b)
+    alert("Sau khi biến  đổi: a="+array[0]+"b= "+array[1] )
+</script>
+</html>

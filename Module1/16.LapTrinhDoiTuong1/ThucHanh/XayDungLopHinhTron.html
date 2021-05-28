@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="veCanvas" width="400" height="400" style="border: 2px solid red"></canvas>
+</body>
+<script>
+    class circle {
+        constructor(radius, color) {
+            this.radius = radius;
+            this.color = color;
+        }
+        getRadius() {
+            return this.radius;
+        }
+        getColor() {
+            return this.color;
+        }
+        getArea(radius) {
+            return Math.PI * this.radius * this.radius;
+        }
+    }
+    let circle1 = new circle(2);
+    let radius = circle1.getRadius();
+    let area = circle1.getArea();
+    alert("Radius: "+ radius + "; Area: " + area);
+</script>
+</html>

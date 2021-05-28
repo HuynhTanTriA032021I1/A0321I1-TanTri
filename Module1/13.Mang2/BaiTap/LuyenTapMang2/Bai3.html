@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="Bài 3" onclick="bai3();"/>
+</body>
+<script>
+    function bai3() {
+        let n = prompt("Nhập độ dài mảng: ");
+        let arr = [];
+        for (let i=0; i<n; i++) {
+            arr[i] = prompt("Giá trị a["+i+"]: ");
+        }
+        document.write("Mảng là: "+ arr +"</br>");
+        let count = 0;
+        for (let i = 0; i<arr.length; i++) {
+            if (isNaN(arr[i])==false){
+                count++;
+            }
+        }
+        document.write("Số ký tự số trong mảng là: "+count);
+    }
+    function equar(arr1, arr2) {
+        if (a.length !== b.length) {
+            return false
+        } else {
+            for (let i = 0; i < a.length; i++) {
+                if (a[i] !== b[i]) {
+                    return false
+                }
+            }
+            return true;
+        }
+</script>
+</html>

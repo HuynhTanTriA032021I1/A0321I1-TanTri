@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="Bài 5" onclick="bai5();"/>
+</body>
+<script>
+    function bai5() {
+        let n = prompt("Nhập số phần trong mảng 01: ");
+        let m = prompt("Nhập số phần trong mảng 02: ");
+        let arr1 = [];
+        let arr2 = [];
+        for (let i = 0; i < n; i++) {
+            arr1[i] = prompt("Giá trị a1[" + i + "]: ");
+            for (let j = 0; j < m; j++){
+                arr2[j] = prompt("Giá trị a2[" + j + "]: ");
+            }
+
+        }
+        document.write("Mảng là 01: " + arr1 + "</br>");
+        document.write("Mảng là 02: " + arr2 + "</br>");
+
+        if (arr1.length !== arr2.length) {
+            document.writeln("Hai mảng không giống nhau")
+        } else {
+            for (let i = 0; i < arr1.length; i++) {
+                if (arr1[i] !== arr2[i]) {
+                    document.writeln("Hai mảng không giống nhau")
+                }
+            }
+            document.writeln("Hai mảng giống nhau")
+
+        }
+    }
+
+
+</script>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="Bài 4" onclick="bai4();"/>
+</body>
+<script>
+    function bai4() {
+        let n = prompt("Nhập số phần trong mảng: ");
+        let arr = [];
+        for (let i = 0; i < n; i++) {
+            arr[i] = prompt("Giá trị a[" + i + "]: ");
+        }
+        document.write("Mảng là: " + arr + "</br>");
+
+        function wordCount(str) {
+            return str.split(" ").length;
+        }
+
+        for (let i = 0; i < arr.length; i++) {
+            document.write(wordCount(arr[i]));
+        }
+    }
+</script>
+</html>

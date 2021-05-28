@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="Bài 4" onclick="bai4();"/>
+</body>
+<script>
+    function bai4() {
+        let n = prompt("Nhập vào độ dài mảng");
+        let arr = [n];
+        for (let i =0; i<n; i++) {
+            arr[i] = prompt("Nhập giá trị thứ "+i+ ": ");
+        }
+        document.write("Mảng ban đầu: "+arr+ "</br>");
+        let arr1 = arr.reverse();
+        document.write("Mảng sau khi đảo ngược là: " +arr1);
+    }
+</script>
+</html>

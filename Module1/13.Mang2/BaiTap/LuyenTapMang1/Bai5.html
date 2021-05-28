@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="Bài 5" onclick="bai5();"/>
+</body>
+<script>
+    function bai5() {
+        let arr = [0,3,-7,11,20,12,-2,-6,7,10];
+        let count = 0;
+        for (let i= 0; i<arr.length; i++) {
+            if(arr[i] < 0) {
+                count++;
+            }
+        }
+        document.write("Số nguyên âm trong mảng là: "+count);
+    }
+</script>
+</html>

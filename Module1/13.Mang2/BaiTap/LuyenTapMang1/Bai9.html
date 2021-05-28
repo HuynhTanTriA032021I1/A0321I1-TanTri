@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="Bài 9" onclick="bai9();"/>
+</body>
+<script>
+    function bai9() {
+        let a = [] , b = [];
+        let  n = parseInt(prompt("Nhập số phẩn tử của mảng!!"))
+        for (let i =0; i<n; i++) {
+            a[i] = prompt("Nhập giá trị thứ "+(i+1)+": ");
+        }
+        for (let i =0 ; i<5; i++) {
+            b[i] = prompt("Nhập giá trị thứ "+(i+1)+": ");
+        }
+        let c = new Array(10);
+        document.write("Chuổi c sau khi ghép là: "+a.concat(b));
+    }
+</script>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="Bài 6" onclick="bai6();"/>
+</body>
+<script>
+    function bai6() {
+        let arr = [];
+        let  n = parseInt(prompt("Nhập số phẩn tử của mảng!!"))
+        for (let i = 0; i < n; i++) {
+            arr[i] = prompt("Nhập giá trị thứ " + i + ": ");
+        }
+        let x = prompt("Nhập giá trị cần tìm: ");
+        if (arr.includes(x)) {
+            document.write("Giá Trị " + x + " có trong mảng");
+        } else
+            document.write("Giá Trị " + x + " không có trong mảng");
+    }
+</script>
+</html>

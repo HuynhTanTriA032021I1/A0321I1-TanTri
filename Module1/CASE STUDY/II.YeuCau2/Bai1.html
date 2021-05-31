@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let  luong = parseInt(prompt("Nhập lương Nhân Viên !!!"))
+    if(luong > 15000000){
+        let thue = 0.2
+        let luongR = luong * thue;
+        document.writeln("Lương: "+luong);
+        document.writeln("</br>Thuế 20%")
+        document.writeln("</br>Lương Ròng: "+luongR)
+    }else if((7000000 <= luong) && (luong <= 15000000)){
+        let thue = 0.1
+        let luongR = luong * thue;
+        document.writeln("Lương: "+luong);
+        document.writeln("</br>Thuế 10% ")
+        document.writeln("</br>Lương Ròng: "+luongR)
+    }else {
+        let thue = 0.05
+        let luongR = luong * thue;
+        document.writeln("Lương: "+luong);
+        document.writeln("</br>Thuế 5%")
+        document.writeln("</br>Lương Ròng: "+luongR)
+    }
+</script>
+</html>

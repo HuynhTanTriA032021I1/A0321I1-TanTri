@@ -26,9 +26,9 @@
         console.log(b);
         document.writeln("<br>Mảng B : "+b)
 
-        c = b.filter(missing)
+        c = b.filter(HieuPT)
         document.writeln("<br>Phần tử không có ở 2 Mảng: "+c)
-    function missing(num){
+    function HieuPT(num){
         return a.indexOf(num) < 0;
         }
 

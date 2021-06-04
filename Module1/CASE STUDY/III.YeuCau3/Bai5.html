@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    do{
+        console.log("--------Menu---------");
+        console.log("1. Cafe");
+        console.log("2. Cam vắt");
+        console.log("3. Nước ép cà rốt");
+        console.log("4. Nước ép cà chua");
+        console.log("5. Nước lọc");
+        console.log("6. Nước dừa");
+        console.log("7. Thoát");
+        do {
+            var n = parseInt(prompt("Bấm chọn:\n 1. Cafe\n 2. Cam vắt\n 3. Nước ép cà rốt\n 4. Nước ép cà chua\n 5. Nước lọc\n 6. Nước dừa\n 7. Thoát "));
+        } while (n<1 || n>8);
+        let sl;
+        switch (n) {
+            case 1:
+                sl = parseInt(prompt("Nhập số lượng: "));
+                alert("Đơn của bạn đặt là: Cafe, số lượng: "+sl+ ", có giá tiền: " + sl * 12000 + "đ");
+                break;
+            case 2:
+                sl = parseInt(prompt("Nhập số lượng: "));
+                alert("Đơn Hàng: Cam vắt, số lượng: "+sl+ ", có giá tiền: " + sl * 17000 + "đ");
+                break;
+            case 3:
+                sl = parseInt(prompt("Nhập số lượng: "));
+                alert("Đơn Hàng: Nước ép cà rốt, số lượng: "+sl+ ", có giá tiền: " + sl * 15000 + "đ");
+                break;
+            case 4:
+                sl = parseInt(prompt("Nhập số lượng: "));
+                alert("Đơn Hàng: Nước ép cà chua, số lượng: "+sl+ ", có giá tiền: " + sl * 13000 + "đ");
+                break;
+            case 5:
+                sl = parseInt(prompt("Nhập số lượng: "));
+                alert("Đơn Hàng: Nước lọc, số lượng: "+sl+ ", có giá tiền: " + sl * 5000 + "đ");
+                break;
+            case 6:
+                sl = parseInt(prompt("Nhập số lượng: "));
+                alert("Đơn Hàng: Nước dừa, số lượng: "+sl+ ", có giá tiền: " + sl * 20000 + "đ");
+                break;
+            case 7:
+                alert("Thoát")
+                break;
+        }
+    } while (n!=0);
+</script>
+</html>

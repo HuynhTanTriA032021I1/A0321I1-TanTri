@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+
+        let n = parseInt(prompt("Nhâp số cột của ma trận: "));
+        let m = parseInt(prompt("Nhâp số hàng của ma trận: "));
+        let sum=0;
+        let matrix = [ ];
+        for(let i = 0; i < m; i++){
+            let row = [];
+            for(let j = 0; j< n; j++){
+                 row[j] = parseInt(prompt("a["+i+","+j+"] = "));
+            }
+            matrix[i] = row;
+        }
+        for(let i=0;i<matrix.length;i++){
+            for(let j=0;j<matrix[i].length;j++){
+                if(matrix[i][j]%2===0){
+                    sum=sum+parseInt(matrix[i][j]);
+                }
+            }
+        }
+        console.table(matrix)
+        document.writeln("Tổng các số chẵn trong ma trận là: "+sum);
+
+</script>
+</html>

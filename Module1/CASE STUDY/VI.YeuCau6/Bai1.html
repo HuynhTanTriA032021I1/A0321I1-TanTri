@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> </title>
+    <style>
+        input {
+            width: 50px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body align="center">
+<h2>Xổ số </h2>
+<input type="text" id="txt1"  style="border-radius:10px ;text-align: center">
+<input type="text" id="txt2"  style="border-radius:10px ;text-align: center">
+<input type="text" id="txt3"  style="border-radius:10px ;text-align: center">
+<input type="text" id="txt4"  style="border-radius:10px ;text-align: center">
+<input type="text" id="txt5"  style="border-radius:10px ;text-align: center">
+<input type="text" id="txt6"  style="border-radius:10px ;text-align: center">
+<br/>
+<button onclick="chonMua();">Mua vé</button>
+<button onclick="kiemTra();">Xem kết quả</button>
+<script>
+    class Lottery {
+        constructor(number1, number2, number3, number4, number5, number6) {
+            this.number1 = number1;
+            this.number2 = number2;
+            this.number3 = number3;
+            this.number4 = number4;
+            this.number5 = number5;
+            this.number6 = number6;
+        }
+
+        getNumber1() {
+            return this.number1;
+        }
+
+        setNumber1(number1) {
+            this.number1 = number1;
+        }
+
+        getNumber2() {
+            return this.number2;
+        }
+
+        setNumber2(number2) {
+            this.number2 = number2;
+        }
+
+        getNumber3() {
+            return this.number3;
+        }
+
+        setNumber3(number3) {
+            this.number3 = number3;
+        }
+
+        getNumber4() {
+            return this.number4;
+        }
+
+        setNumber4(number4) {
+            this.number4 = number4;
+        }
+
+        getNumber5() {
+            return this.number5;
+        }
+
+        setNumber5(number5) {
+            this.number5 = number5;
+        }
+
+        getNumber6() {
+            return this.number6;
+        }
+
+        setNumber6(number6) {
+            this.number6 = number6;
+        }
+    }
+
+    let lottery = new Lottery();
+    let count=0;
+    function chonMua() {
+        if(count==4){
+            alert("Không được mua quá 4 vé");
+        }else {
+            let chon = prompt("Bạn có 2 lựa chọn: \n ( 1 ).Bạn muốn tự chọn số. \n ( 2 ).Hệ thống tự random.");
+
+            if (chon == 1) {
+                tuNhap();
+            } else if (chon == 2) {
+                ranDom();
+            } else {
+                alert("Bạn phải chọn (1) hoặc (2)")
+            }
+            count++;
+        }
+    }
+    function kiemTra() {
+        if (document.getElementById('txt1').value == 11 && document.getElementById('txt2').value == 22 &&
+            document.getElementById('txt3').value == 33 && document.getElementById('txt4').value == 44 &&
+            document.getElementById('txt5').value == 55 && document.getElementById('txt6').value == 66) {
+            alert("Bạn đã giành được giải nhất ");
+        } else if (
+            document.getElementById('txt2').value == 22 && document.getElementById('txt3').value == 33 &&
+            document.getElementById('txt4').value == 44 && document.getElementById('txt5').value == 55 &&
+            document.getElementById('txt6').value == 66) {
+            alert("Bạn giành được giải nhì ");
+        } else if (
+            document.getElementById('txt4').value == 44 && document.getElementById('txt5').value == 55 &&
+            document.getElementById('txt6').value == 66) {
+            alert("Bạn giành được giải khuyến khích ");
+        } else {
+            alert("Chúc bạn may mắn lần sau");
+        }
+    }
+
+
+    function tuNhap() {
+        let nhap1 = prompt("Bạn hãy nhập số Thứ 1 !!");
+        lottery.setNumber1(nhap1);
+        document.getElementById('txt1').value = lottery.getNumber1();
+        let nhap2 = prompt("Bạn hãy nhập số Thứ 2 !!");
+        lottery.setNumber2(nhap2);
+        document.getElementById('txt2').value = lottery.getNumber2();
+        let nhap3 = prompt("Bạn hãy nhập số Thứ 3 !!");
+        lottery.setNumber3(nhap3);
+        document.getElementById('txt3').value = lottery.getNumber3();
+        let nhap4 = prompt("Bạn hãy nhập số Thứ 4 !!");
+        lottery.setNumber4(nhap4);
+        document.getElementById('txt4').value = lottery.getNumber4();
+        let nhap5 = prompt("Bạn hãy nhập số Thứ 5 !!");
+        lottery.setNumber5(nhap5);
+        document.getElementById('txt5').value = lottery.getNumber5();
+        let nhap6 = prompt("Bạn hãy nhập số Thứ 6 !!");
+        lottery.setNumber6(nhap6);
+        document.getElementById('txt6').value = lottery.getNumber6();
+    }
+
+    function ranDom() {
+        let random1 = Math.floor(Math.random() * 100);
+        let random2 = Math.floor(Math.random() * 100);
+        let random3 = Math.floor(Math.random() * 100);
+        let random4 = Math.floor(Math.random() * 100);
+        let random5 = Math.floor(Math.random() * 100);
+        let random6 = Math.floor(Math.random() * 100);
+        lottery.setNumber1(random1);
+        document.getElementById('txt1').value = lottery.getNumber1();
+        lottery.setNumber2(random2);
+        document.getElementById('txt2').value = lottery.getNumber2();
+        lottery.setNumber3(random3);
+        document.getElementById('txt3').value = lottery.getNumber3();
+        lottery.setNumber4(random4);
+        document.getElementById('txt4').value = lottery.getNumber4();
+        lottery.setNumber5(random5);
+        document.getElementById('txt5').value = lottery.getNumber5();
+        lottery.setNumber6(random6);
+        document.getElementById('txt6').value = lottery.getNumber6();
+    }
+
+</script>
+</body>
+</html>

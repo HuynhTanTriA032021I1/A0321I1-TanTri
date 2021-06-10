@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let n = parseInt(prompt("Nhâp số cột của ma trận: "));
+    let m = parseInt(prompt("Nhâp số hàng của ma trận: "));
+    let matrix= [ ];
+    let arr =0;
+    for(let i = 0; i < m; i++){
+        let row = [];
+        for(let j = 0; j< n; j++){
+            row[j] = prompt("a["+i+","+j+"] = ");
+        }
+        matrix[i] =row;
+    }
+    function check(number) {
+        if (number < 2){
+            return false;
+        }
+        for (let i=2;i<=Math.sqrt(number);i++){
+            if(number % i){
+                return false;
+            }
+        }
+        return  true;
+    }
+    for (let i =0; i< matrix.length; i++){
+        for (let  j=0; j <matrix.length; j++){
+            if (check(matrix[i][j])){
+                arr.push(matrix[i][j]);
+            }
+        }
+    }
+    console.table(matrix)
+    console.log(arr)
+
+</script>
+</html>

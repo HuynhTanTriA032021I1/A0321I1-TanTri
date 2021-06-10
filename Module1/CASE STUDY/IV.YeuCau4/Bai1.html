@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+
+    let name = prompt("Nhập tên!!");
+    alert("Tên nhập vào là: "+name+
+        "\n Tên sau khi sửa là: "+Bai1(name)+
+        "\n Từ dài nhất là: "+dodai(Bai1(name)));
+
+
+    function Bai1(name) {
+        name = name.trim().toLocaleLowerCase();
+        //trim : xóa khoảng trống hai bên
+        //toLocaleLowerCase: chuyển hóa tất cả các chữ về chữ thường
+        let nameArray = Array.from(name)
+        for(i =0; i < nameArray.length -1;i++){
+            if(nameArray[i] === " " && nameArray[i+1] === " "){
+                for (j = 1+i; j < nameArray.length -1 ; j++){
+                    nameArray[j] = nameArray[j+1]
+                }
+            }
+            i--;
+            nameArray.pop();
+        }
+        nameArray[0] = nameArray[0].toUpperCase();
+        for ( i=0; i < nameArray.length -1 ;i++){
+            if (nameArray[i] === " "){
+                nameArray[i+1] = nameArray[i+1].toUpperCase();
+            }
+        }
+        return nameArray.join(" ");
+    }
+
+    function dodai(name) {
+        let arrName = name.split(" ");
+        let maxname = arrName[0];
+        for (i = 1;i < arrName.length; i++){
+            if (maxname.length < arrName[i].length){
+                maxname = arrName[i];
+            }
+        }
+        return maxname;
+
+    }
+</script>
+</html>
